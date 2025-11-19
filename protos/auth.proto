@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package auth;
+
+// El servicio de Autenticación
+service AuthService {
+  // Función para verificar un token
+  rpc VerifyToken (VerifyTokenRequest) returns (VerifyTokenResponse);
+}
+
+// Lo que envían (el token)
+message VerifyTokenRequest {
+  string token = 1;
+}
+
+// Lo que respondemos (si es válido y quién es el usuario)
+message VerifyTokenResponse {
+  bool valid = 1;
+  string user_id = 2;
+  string username = 3;
+}
