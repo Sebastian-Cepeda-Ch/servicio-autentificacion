@@ -6,3 +6,7 @@ python-jose[cryptography]
 pydantic[email]
 pydantic-settings
 python-multipart
+bcrypt==4.0.1
+aio_pika
+grpcio
+grpcio-tools
